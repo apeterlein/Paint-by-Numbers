@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="Content-Security-Policy" 	content="default-src 'self'; script-src 'self'; font-src 'self' https:; img-src 'self' data:;">
+		<title>Paint By Numbers</title>
+		<script src="js/jquery.js" type="application/javascript"></script>
+		<script src="js/FileSaver.js" type="application/javascript"></script>
+		<script src="js/index.js" type="application/javascript"></script>
+		<link rel="stylesheet" href="css/index.css" type="text/css">
+		<link rel="stylesheet" href="fonts/notosans.css" type="text/css">
+		<link rel="stylesheet" href="fonts/materialicons.css" type="text/css">
+	</head>
+<body>
+		<div class="starting">
+			Drop an image here to begin...
+		</div>
+		<div class="drop-icon material-icons bounce">
+			arrow_downward
+		</div>
+		<div class="image">
+			<canvas id="working-image"></canvas>
+			<div class="buttons">
+				<div class="input-group">
+					Number&nbsp;of&nbsp;divisions:&nbsp;<input type="number" name="vert" min="1" value="10" id="vert">&nbsp;x&nbsp;<input type="number" name="horz" min="1" value="10" id="horz">&nbsp;&nbsp;&nbsp;&nbsp;
+					Number&nbsp;of&nbsp;colors:&nbsp;<input type="number" name="colors" min="1" value="10" id="colors">
+				</div>
+				<div class="button-group">
+					<div class="button" id="start">
+						Start
+					</div>
+					<div class="button" id="save">
+						Save
+					</div>
+					<div class="button" id="reset">
+						Reset
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="loading bounce">
+			...
+		</div>
+	</body>
+</html>
