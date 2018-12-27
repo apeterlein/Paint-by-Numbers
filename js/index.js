@@ -23,14 +23,14 @@ $(document).ready(function () {
 	$(".loading").hide();
 	$("#save").css('visibility', 'hidden');
 	
-	$("html").on("dragover", function() {
+	$("html").on("dragover", function(event) {
 		event.preventDefault();  
     	event.stopPropagation();
 		$(".drop-icon").removeClass("bounce")
 			.html("check");
 	});
 
-	$("html").on("dragleave", function() {
+	$("html").on("dragleave", function(event) {
 		event.preventDefault();  
     	event.stopPropagation();
 		$(".drop-icon").addClass("bounce")
@@ -60,7 +60,8 @@ $(document).ready(function () {
 				  }
 				  ctx.drawImage(img, start, 0, width, height);
 				  if (squares) {
-					  drawsquares();
+                          drawsquares();
+                          drawnumbers();
 				  }
 				  drawlines();
 			  };
